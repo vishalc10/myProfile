@@ -28,5 +28,28 @@ $(document).ready(function(){
 
 function showInput(){
   let val = $("#user_input").val();
-  $("#display").text(val);
+  var len = val.length;
+  $("#display").text(len);
 }
+
+$("#fname").keyup(function() {
+  $("#username").text($(this).val());
+});
+
+$(document).ready(function () {
+  $('#imp').click(function () {
+      if ($(this).is(':checked')) {
+        $("#inch").slideDown();
+        $("#cmft").html("Feet");
+        $("#kglbs").html("Pounds");
+      }
+  });
+
+  $('#met').click(function () {
+      if ($(this).is(':checked')) {
+        $("#inch").hide();
+        $("#cmft").html("Cm");
+        $("#kglbs").html("Kgs");
+      }
+  });
+});

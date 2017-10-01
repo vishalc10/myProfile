@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="profile.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<script src="profile.js"></script>
+
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -27,8 +28,6 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">ABOUT</a></li>
-                <li><a href="index.html">MY SCHEDULE</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#">YOUR CHOICE</a></li>          
             </ul>
@@ -57,14 +56,78 @@
             </form>
             <br>
             <form>
-            <input type="submit" class="btn btn-default" onclick="showInput()"><hr>
-            <label>Total number of characters:</label>
-            <p><span id='display'>The answer will be displayed here</span></p>
+            <button type="button" class="btn btn-default" onclick="showInput()">Count</button><br>
+            <label>Total number of characters is: <span id='display'>_</span></label>
             </form>
         </div>
-        <div class="col-sm-2"></div>
-    </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div><hr>
+    <h2>Calculate your BMI</h2>
+    <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form>   
+                    Please Enter your name here:              
+                    <input type="text" name="message" id="fname" class="form-control">
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <label for="h1">Height - <span id="cmft">Feet</span>: </label>
+            </div>
+            <div class="col-sm-2">
+                    <input type="text" id="ht"/>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div id="inch" class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <label for="h2">Inches: </label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="in"/>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                    <label for="w">Weight - <span id="kglbs">Pounds</span>: </label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="wt"/>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <input checked type="radio" name="u" id="imp" value="i"/><label for="u2">Imperial</label>
+                <input type="radio" name="u" id="met" value="m"/><label for="u1">Metric</label>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-default">Calculate BMI</button><br>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2">
+                    <label for="u1" id="bmiR">Hello <span id="username"></span>, your BMI is: <span id="bmidisplay">_</span></label>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
 </div>
+
+
 
 <div id="contact" class="container-fluid">
     <h2>CONTACT</h2>
