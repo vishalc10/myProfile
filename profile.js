@@ -32,9 +32,22 @@ function showInput(){
   $("#display").text(len);
 }
 
-$("#fname").keyup(function() {
-  $("#username").text($(this).val());
-});
+ $('fullname').keyup(function(){
+      value = $("fullname").val(); 
+      $("usn").val(value);
+   });
+var h, h2, w, bmi;
+
+function calculate_bmi(h, w) {
+  bmi = h * h;
+  bmi = w / bmi;
+  if ($('#imp').is(':checked')) {
+    bmi = bmi * 703;
+  }
+  bmi = bmi.toFixed(1);
+  return bmi;
+}
+
 
 $(document).ready(function () {
   $('#imp').click(function () {
@@ -51,5 +64,34 @@ $(document).ready(function () {
         $("#cmft").html("Cm");
         $("#kglbs").html("Kgs");
       }
+  });
+
+
+  $("#calBmi").click(function () {
+    h = parseInt($("#ht").val()) || 0;
+    h2 = parseInt($("#in").val()) || 0;
+    w = parseInt($("#wt").val()) || 0;
+    if ($('#imp').is(':checked')) {
+      h = h * 12;
+      h = h + h2;
+    } else {
+      h = h / 100;
+    }
+    bmi = calculate_bmi(h, w);
+
+    // $("#username").html(fullname);
+    $("#bmidisplay").html(bmi);
+
+    if (bmi>=18.5 && bmi<=25) {
+      $("#bmiCat").html("Normal");
+    }
+    else if (bmi<18.5) {
+      $("#bmiCat").html("Underweight");
+    }
+    else{
+      $("#bmiCat").html("Overweight");
+    }
+    
+    
   });
 });

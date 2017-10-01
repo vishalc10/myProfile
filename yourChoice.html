@@ -70,7 +70,7 @@
             <div class="col-sm-6">
                 <form>   
                     Please Enter your name here:              
-                    <input type="text" name="message" id="fname" class="form-control">
+                    <input type="text" name="fname" id="fname" class="form-control">
                 </form>
             </div>
             <div class="col-sm-3"></div>
@@ -112,16 +112,17 @@
                 <input type="radio" name="u" id="met" value="m"/><label for="u1">Metric</label>
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-default">Calculate BMI</button><br>
+                <button type="button" class="btn btn-default" id="calBmi">Calculate BMI</button><br>
             </div>
             <div class="col-sm-4"></div>
         </div>
         <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-2">
-                    <label for="u1" id="bmiR">Hello <span id="username"></span>, your BMI is: <span id="bmidisplay">_</span></label>
+                    <label for="u1" id="bmiR">Hello <span id="usn"></span>, your BMI is: <span id="bmidisplay">_</span></label>
                 </div>
                 <div class="col-sm-2">
+                    <label for="bmiCategory" id="bmiCat"></label>
                 </div>
                 <div class="col-sm-4"></div>
             </div>
