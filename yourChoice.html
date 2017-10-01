@@ -12,7 +12,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<script src="profile.js"></script>
+<script src="choice.js"></script>
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -23,6 +23,7 @@
                 <span class="icon-bar"></span> 
             </button>
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+            <a class="navbar-brand" href="index.html">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -36,7 +37,7 @@
 </nav>
 
 <div class="jumbotron text-center">
-<h1>Vishal Chilka</h1> 
+<h1>Vishal Chilka</h1>
 <p>MS-ACS Student at Northwest<br>Email: <a href="mailto:S530712@nwmissouri.edu">S530712@nwmissouri.edu</a></p> 
 <form class="form-inline">       
     <div class="input-group">        
@@ -52,11 +53,11 @@
         <div class="col-sm-8">
             <form>
                 <label><b>Enter a String</b></label>
-                <input type="text" name="message" id="user_input" class="form-control" placeholder="Your message here!">
+                <input type="text" name="message" id="user_input" class="form-control" value="Your, message here!">
             </form>
             <br>
             <form>
-            <input type="submit" class="btn btn-default" onclick="showInput();"><hr>
+            <input type="submit" class="btn btn-default" onclick="showInput()"><hr>
             <label>Total number of characters:</label>
             <p><span id='display'>The answer will be displayed here</span></p>
             </form>
