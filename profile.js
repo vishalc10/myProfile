@@ -25,3 +25,8 @@ $(document).ready(function(){
 
   // document.getElementById('display').innerHTML = document.getElementById("user_input").value;
 })
+
+function showInput(){
+  let val = $("#user_input").val();
+  $("#display").text(val);
+}
