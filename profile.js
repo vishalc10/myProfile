@@ -1,3 +1,10 @@
+function showInput(){
+  let val = $("#user_input").val();
+  var len = val.length;
+  $("#display").text(len);
+  return len;
+}
+
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
@@ -26,11 +33,7 @@ $(document).ready(function(){
   // document.getElementById('display').innerHTML = document.getElementById("user_input").value;
 })
 
-function showInput(){
-  let val = $("#user_input").val();
-  var len = val.length;
-  $("#display").text(len);
-}
+
 
  $('fullname').keyup(function(){
       value = $("fullname").val(); 
