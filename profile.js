@@ -33,15 +33,15 @@ function showInput(){
   return len;
 }
 
- $('fullname').keyup(function(){
+$('fullname').keyup(function(){
       value = $("fullname").val(); 
       $("usn").val(value);
    });
-var h, h2, w, bmi;
+var hft, hin, weight, bmi;
 
-function calculate_bmi(h, w) {
-  bmi = h * h;
-  bmi = w / bmi;
+function calculate_bmi(hft, weight) {
+  bmi = hft * hft;
+  bmi = weight / bmi;
   if ($('#imp').is(':checked')) {
     bmi = bmi * 703;
   }
@@ -69,16 +69,16 @@ $(document).ready(function () {
 
 
   $("#calBmi").click(function () {
-    h = parseInt($("#ht").val()) || 0;
-    h2 = parseInt($("#in").val()) || 0;
-    w = parseInt($("#wt").val()) || 0;
+    hft = parseInt($("#ht").val()) || 0;
+    hin = parseInt($("#in").val()) || 0;
+    weight = parseInt($("#wt").val()) || 0;
     if ($('#imp').is(':checked')) {
-      h = h * 12;
-      h = h + h2;
+      hft = hft * 12;
+      hft = hft + hin;
     } else {
-      h = h / 100;
+      hft = hft / 100;
     }
-    bmi = calculate_bmi(h, w);
+    bmi = calculate_bmi(hft, weight);
 
     // $("#username").html(fullname);
     $("#bmidisplay").html(bmi);
